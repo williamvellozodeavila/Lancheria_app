@@ -1,4 +1,4 @@
-1. Clonar o repositório
+✅ 1. Clonar o repositório
 No terminal:
 
 git clone https://github.com/williamvellozodeavila/Lancheria_app.git
