@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/Home';
+import DetailScreen from './screens/Detalhe';
+import { Lanche } from './types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export type RootStackParamList = {
+  Lancheria: undefined;
+  'Detalhes do Lanche': { lanche: Lanche };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    AsyncStorage.getItem('lancheria_login').then((val) => {
+      if (val === 'true') setLoggedIn(true);
+    });
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Lancheria">
+          {(props) => <HomeScreen {...props} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
+        </Stack.Screen>
+        <Stack.Screen name="Detalhes do Lanche" component={DetailScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
