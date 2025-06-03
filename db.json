@@ -1,0 +1,60 @@
+{
+  "lanches": [
+    {
+      "id": "1",
+      "nome": "X-Burguer",
+      "descricao": "Pão, carne e queijo.",
+      "preco": "R$ 15,00",
+      "imagem": "xburguer.jpg"
+    },
+    {
+      "id": "2",
+      "nome": "X-Salada",
+      "descricao": "Pão, carne, queijo e salada.",
+      "preco": "R$ 17,00",
+      "imagem": "xsalada.jpg"
+    },
+    {
+      "id": "3",
+      "nome": "X-Bacon",
+      "descricao": "Bacon crocante no lanche.",
+      "preco": "R$ 18,00",
+      "imagem": "xbacon.jpg"
+    },
+    {
+      "id": "4",
+      "nome": "X-Frango",
+      "descricao": "Frango grelhado com maionese.",
+      "preco": "R$ 16,00",
+      "imagem": "xfrango.jpg"
+    },
+    {
+      "id": "5",
+      "nome": "X-Egg",
+      "descricao": "Com ovo frito.",
+      "preco": "R$ 17,50",
+      "imagem": "xegg.jpg"
+    },
+    {
+      "id": "6",
+      "nome": "X-Tudo",
+      "descricao": "Tudo que tem direito.",
+      "preco": "R$ 22,00",
+      "imagem": "xtudo.jpg"
+    },
+    {
+      "id": "7",
+      "nome": "X-Calabresa",
+      "descricao": "Com calabresa acebolada.",
+      "preco": "R$ 19,00",
+      "imagem": "xcalabresa.jpg"
+    },
+    {
+      "id": "8",
+      "nome": "X-Veggie",
+      "descricao": "Lanche vegetariano delicioso.",
+      "preco": "R$ 16,50",
+      "imagem": "xveggie.jpg"
+    }
+  ]
+}

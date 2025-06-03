@@ -1,33 +1,90 @@
-✅ 1. Clonar o repositório
-No terminal:
+🍔 Lancheria App
 
-git clone https://github.com/williamvellozodeavila/Lancheria_app.git
+Aplicativo mobile feito com Expo + React Native + TypeScript, simulando uma lancheria com:
 
-cd Lancheria_app
+Catálogo de lanches (imagem, nome, preço)
 
-✅ 2. Instalar as dependências
+Visualização de detalhes do lanche
+
+Carrinho de compras
+
+Login simples com persistência
+
+📦 Tecnologias usadas
+
+Expo
+
+React Native
+
+TypeScript
+
+React Navigation
+
+AsyncStorage
+
+JSON Server (simulação de backend)
+
+🧰 Instalação
+
+1. Clone o projeto
+
+git clone https://github.com/seu-usuario/Lancheria-app.git
+cd Lancheria-app
+
+2. Instale as dependências
 
 npm install
 
-Isso instala tudo que está no package.json.
+3. Rode o JSON Server (simula o backend)
 
-✅ 3. Instalar o Expo CLI (caso ainda não tenha)
+npx json-server --watch db.json --port 3001
 
-npm install -g expo-cli
+4. Inicie o app
 
-✅ 4. Iniciar o projeto com cache limpo (recomendado)
+npx expo start
 
-npx expo start --clear
+Use o QRCode no celular com o app Expo Go instalado.
 
-✅ 5. Escanear o QR Code com o Expo Go no celular
-Após o comando acima, vai aparecer um QR Code no terminal ou navegador.
+📂 Estrutura de pastas
 
-Use o app Expo Go para escanear.
+Lancheria-app/
+├── App.tsx
+├── db.json
+├── types.ts
+├── /assets
+├── /components
+├── /screens
+├── /utils
+└── /...
 
-O app vai rodar normalmente no celular.
+🔐 Login
 
-✅ 6. Verifique se o projeto tem essas dependências (em package.json)
-Se precisar, instale manualmente:
+Login simulado sem banco:
 
-npx expo install @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context
-npx expo install @react-native-async-storage/async-storage
+Usuário: admin
+
+Senha: 123
+
+Após logado, o botão do WhatsApp é exibido.
+
+✅ Funcionalidades
+
+Listagem de lanches com 3 colunas (foto, nome, preço)
+
+Detalhes ao clicar em um lanche
+
+Adicionar e remover do carrinho
+
+Contador de itens no topo
+
+Login com persistência local
+
+🛒 Melhorias futuras
+
+Integração real com backend
+
+Tela de pedidos finalizados
+
+Autenticação via API
+
+Feito com 💙 por William Ávila
